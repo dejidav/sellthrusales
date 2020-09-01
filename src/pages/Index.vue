@@ -775,7 +775,7 @@
             }, 1000);              
           },
           getPage: function() {
-            var rootLink = "http://localhost:8888/sellthrusales/wp-json/acf/v3/pages/2"
+            var rootLink = "http://sellthrusales.com/wp-json/acf/v3/pages/2"
             axios
               .get(rootLink)
               .then(response => (this.page = response.data.acf))
@@ -976,7 +976,7 @@
                     form.append(field, emailBody[field]);
                 }
 
-                axios.post('http://localhost:8888/sellthrusales/wp-json/contact-form-7/v1/contact-forms/224/feedback', form)
+                axios.post('http://sellthrusales.com/wp-json/contact-form-7/v1/contact-forms/224/feedback', form)
                 .then(response => {
                   console.log(response.data.message)
                   this.output = response.data.message;          
